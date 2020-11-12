@@ -3,12 +3,14 @@ $raparigas=0;
 $rapazes=0;
 
 	if (isset($_POST["txt_numero1"])&& isset($_POST["txt_numero2"])) {
-		
-		$raparigas = $_POST["txt_numero1"];
-		$rapazes = $_POST["txt_numero2"];
-		
-		echo "Raparigas: " .$raparigas. "<br>";
-		echo "Rapazes: " .$rapazes. "<br>";
+		if (is_numeric($_POST["txt_numero1"])&& is_numeric($_POST["txt_numero2"]) {
+			
+			$raparigas = $_POST["txt_numero1"];
+			$rapazes = $_POST["txt_numero2"];
+			
+			echo "Raparigas: " .$raparigas. "<br>";
+			echo "Rapazes: " .$rapazes. "<br>";
+		}
 	}
 
 	//função do total da turma
@@ -51,4 +53,4 @@ $rapazes=0;
 		echo rapazes($turma,$rapazes);
 		echo " % <br>";
 
-?> 
+?>

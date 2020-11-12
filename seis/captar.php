@@ -5,10 +5,16 @@ $cantina=0;
 $transporte=0;
 
 	if (isset($_POST["txt_numero1"])) {
-		
-		$ordenado = $_POST["txt_numero1"];
-		
-		echo "Ordenado Bruto: " .$ordenado. " € <br>";
+
+		if (is_numeric($_POST["txt_numero1"])) {
+			
+			$ordenado = $_POST["txt_numero1"];
+			echo "Ordenado Bruto: " .$ordenado. " € <br>";
+		}
+		else{
+
+			return "erro";
+		}
 	}
 
 	//função dos vencimentos

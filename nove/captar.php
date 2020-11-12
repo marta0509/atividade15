@@ -3,7 +3,6 @@ $nota=0;
 
 	if (isset($_POST["chb_valor"])) {	
 		
-		
 		$nota = $_POST["chb_valor"];
 		
 	}

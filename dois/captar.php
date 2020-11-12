@@ -3,12 +3,15 @@ $numero1=0;
 $numero2=0;
 
 	if (isset($_POST["txt_numero1"])&& isset($_POST["txt_numero2"])) {
-		
-		$numero1 = $_POST["txt_numero1"];
-		$numero2 = $_POST["txt_numero2"];
-		
-		echo "Número 1: " .$numero1. "<br>";
-		echo "Número 2: " .$numero2. "<br>";
+
+		if (is_numeric($_POST["txt_numero1"]) && is_numeric($_POST["txt_numero2"])) {
+
+			$numero1 = $_POST["txt_numero1"];
+			$numero2 = $_POST["txt_numero2"];
+			
+			echo "Número 1: " .$numero1. "<br>";
+			echo "Número 2: " .$numero2. "<br>";
+		}
 	}
 
 	//função da soma
@@ -39,9 +42,17 @@ $numero2=0;
 
 		function divisao($numero1,$numero2)
 		{
-			$div=0;
-			$div=$numero1 / $numero2;
-			return $div;
+			if ($numero2!=0) {
+
+				$div=0;
+				$div=$numero1 / $numero2;
+				return $div;
+			}
+			else{
+
+				return "erro";
+			}
+			
 		}
 		echo "A divisão é: ";
 		echo divisao($numero1,$numero2);
@@ -51,9 +62,17 @@ $numero2=0;
 
 		function multiplicacao($numero1,$numero2)
 		{
-			$mul=0;
-			$mul=$numero1 * $numero2;
-			return $mul;
+			if ($numero1!=0 && $numero2!=0) {
+
+				$mul=0;
+				$mul=$numero1 * $numero2;
+				return $mul;
+			}
+			else{
+
+				return "erro";
+			}
+			
 		}
 		echo "A multiplicação é: ";
 		echo multiplicacao($numero1,$numero2);

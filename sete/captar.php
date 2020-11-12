@@ -3,8 +3,10 @@ $idade=0;
 
 	if (isset($_POST["idade"])) {	
 
-		$idade = $_POST["idade"];
-		
+		if (is_numeric($_POST["idade")) {
+			
+			$idade = $_POST["idade"];
+		}		
 	}
 	
 	if ($idade<18) {
