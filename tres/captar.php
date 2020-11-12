@@ -11,8 +11,10 @@ $numero2=0;
 		echo "Número 2: " .$numero2. "<br>";
 	}
 
-	//função da soma
-
+	
+	if ($_POST["operacao"]=="soma") {
+		
+		//função da soma
 		function soma($numero1,$numero2)
 		{
 			$soma=0;
@@ -22,8 +24,11 @@ $numero2=0;
 		echo "A soma é: ";
 		echo soma($numero1,$numero2);
 		echo "<br>";
+	}
 
-	//função da subtração
+	elseif ($_POST["operacao"]=="subtracao") {
+		
+		//função da subtração
 
 		function subtracao($numero1,$numero2)
 		{
@@ -34,8 +39,11 @@ $numero2=0;
 		echo "A subtração é: ";
 		echo subtracao($numero1,$numero2);
 		echo "<br>";
-
-	//função da divisão
+	}
+		
+	elseif ($_POST["operacao"]=="divisao") {
+		
+		//função da divisão
 
 		function divisao($numero1,$numero2)
 		{
@@ -46,8 +54,11 @@ $numero2=0;
 		echo "A divisão é: ";
 		echo divisao($numero1,$numero2);
 		echo "<br>";
+	}
 	
-	//função da multiplicação
+	elseif ($_POST["operacao"]=="multiplicacao") {
+		
+		//função da multiplicação
 
 		function multiplicacao($numero1,$numero2)
 		{
@@ -58,5 +69,6 @@ $numero2=0;
 		echo "A multiplicação é: ";
 		echo multiplicacao($numero1,$numero2);
 		echo "<br>";
-
+	}
+		
 ?> 
